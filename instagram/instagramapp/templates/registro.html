@@ -1,7 +1,8 @@
-<html>
+{% load static %}
+ <html>
 <head>
   <title>  </title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet"  href="{% static 'css/style.css' %}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -9,9 +10,11 @@
   <meta charset="UTF-8">
 </head>
 <body>
+
   <div class="row justify-content-md-center" id="bloque1">
-    <div class="card col-2"  style="width: 20rem; height: 30%;">
+    <div class="card"  style="width: 20rem;">
       <div class="card-block">
+
         <form>
           <div class="form-group">
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre completo">
@@ -24,28 +27,28 @@
           </div>
           <div class="form-group">
             <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="Contraseña">
-        </div>
+          </div>
+          <div><center>
+          <button type="button" class="btn btn-primary btn-md">REGISTRAR</button>
+            </center>
+          </div>
       </form>
     </div>
     </div>
-  </div>
+    </div>
 
-      <div class="row justify-content-md-center" id="bloque2">
-      <div class="card col-2"  style="width: 20rem; height: 10%;">
-        <div class="card-block">
-          <form>
-
-
-          </button>
-        </form>
-
+  <div class="row justify-content-md-center" id="bloque2">
+    <div class="card"  style="width: 20rem;">
+      <div class="card-block">
+        ¿tienes cuenta?
 
       </div>
-    </div>
-  </div>
-  <button type="button" class="btn btn-primary">Iniciar sesión</button>
+      </div>
+      </div>
 
-</button>
+
+
+
 
   <img src=""></img>
 </body>
