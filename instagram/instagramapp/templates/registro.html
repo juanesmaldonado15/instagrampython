@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 <html>
-<head>
+ <head>
   <title>Instagram</title>
   <link rel="stylesheet" type="text/css" href="{% static 'css/registro.css' %}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -10,48 +10,45 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
-</head>
-<body background="/Users/centroatico/Documents/giphy.gif">
+ </head>
+ <body background="/Users/centroatico/Documents/giphy.gif">
 
-  <div class="row justify-content-md-center" id="bloque1">
-    <div class="card"  style="width: 20rem;">
+    <div class="row justify-content-md-center" id="bloque1">
+     <div class="card"  style="width: 20rem;">
       <div class="card-block">
 
         <form action="{% url 'crear_usuario' %}" method='POST'>
+          {% csrf_token %}
           <h1>
             <center>
               <font face="Cursive">INSTAGRAM</font>
             </center>
           </h1>
           <div class="form-group">
-            <input type="text" class="form-control" id="name" name="name" placeholder="Nombre completo">
+            <input type="text" class="form-control" id="name" name="NombreCompleto" placeholder="Nombre completo">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Correo electrónico">
+            <input type="text" class="form-control" id="name" name="CorreoElectronico" placeholder="Correo electronico">
           </div>
             <div class="form-group">
-            <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="Usuario">
+            <input type="text" class="form-control" id="name" name="Usuario" placeholder="Usuario">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="Contraseña">
+            <input type="password" class="form-control" id="name" name="Contrasena" placeholder="Contrasena">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" id="formGroupExampleInput5" placeholder="Confirmar contraseña">
+            <input type="password" class="form-control" id="name" name="ConfirmarContrasena" placeholder="Confirmar contrasena">
           </div>
           <div>
-          <form action="">
-           <input type="radio" name="gender" value="male"> Mujer<br>
-           <input type="radio" name="gender" value="female"> Hombre<br>
-           <input type="radio" name="gender" value="other"> Otros
-          </form>
+           <input type="radio" name="genderm" value="male"> Mujer<br>
+           <input type="radio" name="genderm" value="female"> Hombre<br>
+           <input type="radio" name="gendero" value="other"> Otros
           <center>
-            <form action="/action_page.php">
-             Fecha de nacimiento:
-             <input type="date" name="Nacimiento">
-            </form>
+            Fecha de nacimiento:
+            <input type="date" name="Nacimiento">
           </center>
           <center>
-           <a href="bienvenida.html"><button type="button" class="btn btn-primary btn-md">Crear cuenta</button></a>
+           <button class="btn btn-primary btn-md">Crear cuenta</button>
           </center>
           </div>
       </form>
@@ -59,15 +56,15 @@
     </div>
     </div>
 
-  <div class="row justify-content-md-center" id="bloque2">
+   <div class="row justify-content-md-center" id="bloque2">
     <div class="card"  style="width: 20rem;">
       <div class="card-block">
         <center>
-         ¿tienes cuenta? <a href="ingresar.html">Ingresar</a>
+         ¿tienes cuenta? <a href="{% url 'ingresar' %}">Ingresar</a>
         </center>
-  </div>
-  </div>
-  </div>
+   </div>
+   </div>
+   </div>
 
 
 
