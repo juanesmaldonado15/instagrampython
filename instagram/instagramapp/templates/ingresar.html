@@ -3,7 +3,7 @@
 <html>
  <head>
   <title>Instagram</title>
-  <link rel="stylesheet"  href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/vistaingresar.css' %}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -19,7 +19,8 @@
     <div class="card"  style="width: 20rem;">
       <div class="card-block">
 
-        <form action='{% url 'ingresar' %}' method='POST'>
+        <form action='{% url 'login' %}' method='POST'>
+          {% csrf_token %}
           <h1>
             <center>
               <font face="Cursive">INSTAGRAM</font>
@@ -29,14 +30,14 @@
             <input type="text" class="form-control" id="" name="username" placeholder="usuario">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" id="" name="password" placeholder="Contraseña">
+            <input type="password" class="form-control" id="" name="password" placeholder="Contraseña">
           </div>
           <div><center>
           <center>
             <a href="olvidocontraseña.html">¿Olvidaste tu contraseña?</a>
           </center>
             <center>
-             <a href="{% url 'inicio' %}"><button type="button" class="btn btn-primary btn-md">Entrar</button></a>
+             <button class="btn btn-primary btn-md">Entrar</button>
             </center>
           </div>
       </form>
