@@ -120,6 +120,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#archivos multimedia.
+MEDIA_ROOT = os.path.join(BASE_DIR, 'instagramapp/static/maia')
+MEDIA_URL = '/media/'
+
+
 LOGIN_URL = 'registro'
 LOGIN_REDIRECT_URL = 'inicio'
 LOGOUT_REDIRECT_URL = 'registro'
